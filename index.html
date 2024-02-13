@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Valentine card</title>
+</head>
+<body>
+
+<div id="valentine"></div>
+
+<style>
+    #valentine {
+        width: 100vmin;
+        height: 100vmin;
+        display: grid;
+        grid-template-rows: repeat(11, 1fr);
+        grid-template-columns: repeat(13, 1fr);
+        font-size: 4vw;
+        color: red;
+        margin: 0 auto;
+    }
+    .heartOpacity1 {
+        opacity: 0.1;
+    }
+    .heartOpacity2 {
+        opacity: 1;
+        transition-duration: 5s;
+    }
+    #phrase {
+        background-color: red;
+        color: white;
+        font-size: 5vw;
+        position: absolute;
+        z-index: 1;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-name: phrase;
+    }
+    @keyframes phrase {
+        0% {
+            top: 1vw;
+            left: 25vw;
+        }
+        100% {
+            top: 38vw;
+            left: 38vw;
+        }
+    }
+</style>
+
+<script>
+
+    let valentine = document.getElementById('valentine');
+
+    for (let i = 0; i < 143; i++) {
+        let valentinePeace = document.createElement('div');
+        valentinePeace.classList.add('heartOpacity1');
+        valentine.appendChild(valentinePeace);
+    }
+
+    let littleHeart = document.querySelector('#valentine').querySelectorAll('div');
+
+    for (let i = 0; i < 143; i++) {
+        setTimeout(function () {
+            if (i >= 2 && i <= 4 || i >= 8 && i <= 10) {
+                littleHeart[i].innerHTML = "♥";
+                littleHeart[i].classList.remove('heartOpacity1');
+                littleHeart[i].classList.add('heartOpacity2');
+            }
+        },500);
+        setTimeout(function () {
+            if (i >= 14 && i <= 18 || i >= 20 && i <= 24) {
+                littleHeart[i].innerHTML = "♥";
+                littleHeart[i].classList.remove('heartOpacity1');
+                littleHeart[i].classList.add('heartOpacity2');
+            }
+        },1000);
+        setTimeout(function () {
+            if (i >= 26 && i <= 38) {
+                littleHeart[i].innerHTML = "♥";
+                littleHeart[i].classList.remove('heartOpacity1');
+                littleHeart[i].classList.add('heartOpacity2');
+            }
+        },1500);
+        setTimeout(function () {
+            if (i >= 39 && i <= 51) {
+                littleHeart[i].innerHTML = "♥";
+                littleHeart[i].classList.remove('heartOpacity1');
+                littleHeart[i].classList.add('heartOpacity2');
+            }
+        },2000);
+        setTimeout(function () {
+            if (i >= 52 && i <= 64) {
+                littleHeart[i].innerHTML = "♥";
+                littleHeart[i].classList.remove('heartOpacity1');
+                littleHeart[i].classList.add('heartOpacity2');
+            }
+        },2500);
+        setTimeout(function () {
+            if (i >= 66 && i <= 76) {
+                littleHeart[i].innerHTML = "♥";
+                littleHeart[i].classList.remove('heartOpacity1');
+                littleHeart[i].classList.add('heartOpacity2');
+            }
+        },3000);
+        setTimeout(function () {
+            if (i >= 80 && i <= 88) {
+                littleHeart[i].innerHTML = "♥";
+                littleHeart[i].classList.remove('heartOpacity1');
+                littleHeart[i].classList.add('heartOpacity2');
+            }
+        },3500);
+        setTimeout(function () {
+            if (i >= 94 && i <= 100) {
+                littleHeart[i].innerHTML = "♥";
+                littleHeart[i].classList.remove('heartOpacity1');
+                littleHeart[i].classList.add('heartOpacity2');
+            }
+        },4000);
+        setTimeout(function () {
+            if (i >= 108 && i <= 112) {
+                littleHeart[i].innerHTML = "♥";
+                littleHeart[i].classList.remove('heartOpacity1');
+                littleHeart[i].classList.add('heartOpacity2');
+            }
+        },4500);
+        setTimeout(function () {
+            if (i >= 122 && i <= 124) {
+                littleHeart[i].innerHTML = "♥";
+                littleHeart[i].classList.remove('heartOpacity1');
+                littleHeart[i].classList.add('heartOpacity2');
+            }
+        },5000);
+        setTimeout(function () {
+            if (i === 136) {
+                littleHeart[i].innerHTML = "♥";
+                littleHeart[i].classList.remove('heartOpacity1');
+                littleHeart[i].classList.add('heartOpacity2');
+            }
+        },5500);
+        setTimeout(function () {
+            if (i === 142) {
+                let phrase = document.createElement('div');
+                phrase.setAttribute('id', 'phrase');
+                phrase.innerHTML = 'I Love You!';
+                valentine.appendChild(phrase);
+            }
+        },6000);
+    }
+
+</script>
+
+</body>
+</html>
