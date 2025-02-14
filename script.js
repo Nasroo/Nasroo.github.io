@@ -1,7 +1,12 @@
-// Function to show the Valentine's message
+// Function to fetch text from a file and display it
 function showValentineMessage() {
-    document.getElementById('message').innerText = "Happy Valentine's Day ❤️";
-    document.getElementById('message').style.display = 'block';
+    fetch('message.txt') // Fetch the content of the message.txt file
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById('message').innerText = text; // Display the text
+            document.getElementById('message').style.display = 'block';
+        })
+        .catch(error => console.error('Error fetching the message:', error));
 }
 
 // Add event listener to the original Yes button
