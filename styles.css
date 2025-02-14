@@ -20,6 +20,13 @@ h1 {
     color: #d32f2f;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
 button {
     background-color: #d32f2f;
     color: white;
@@ -35,7 +42,7 @@ button:hover {
     background-color: #b71c1c;
 }
 
-#hiddenMessage {
+#message {
     margin-top: 20px;
     font-size: 18px;
     color: #333;
