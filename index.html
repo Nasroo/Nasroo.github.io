@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be My Valentine</title>
+    <title>Be My Valentine?</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="container">
-        <h1>Will You Be My Valentine?</h1>
-        <div class="button-container">
-            <button id="yesBtn">Yes</button>
-            <button id="noBtn">No</button>
-        </div>
-        <p id="message" style="display: none;"></p>
-        
-        <!-- Popup Modal for the No Button -->
-        <div id="popup" class="popup">
-            <p>Huh? You miss-clicked, try again</p>
-            <button id="okBtn">Okay</button>
-        </div>
+        <h1>Will you be my Valentine? 💖</h1>
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
     </div>
-    
-    <script src="script.js" defer></script>
+
+    <!-- Popup Message -->
+    <div id="popup" class="popup">
+        <p id="popup-text"></p>
+        <button id="okBtn">Okay</button>
+    </div>
+
+    <!-- Message Display -->
+    <div id="message" class="message-box"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
