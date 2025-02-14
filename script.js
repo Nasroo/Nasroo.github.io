@@ -1,8 +1,9 @@
-document.getElementById('revealMessageBtn').addEventListener('click', function() {
-    var message = document.getElementById('hiddenMessage');
-    if (message.style.display === 'none') {
-        message.style.display = 'block';
-    } else {
-        message.style.display = 'none';
-    }
+document.getElementById('yesBtn').addEventListener('click', function() {
+    document.getElementById('message').innerText = "Yay! Can't wait for our Valentine's Day! ❤️";
+    document.getElementById('message').style.display = 'block';
+});
+
+document.getElementById('noBtn').addEventListener('click', function() {
+    document.getElementById('message').innerText = "hey? u miss clicked? I'll give u another chance";
+    document.getElementById('message').style.display = 'block';
 });
