@@ -18,24 +18,42 @@ function showValentineMessage() {
     document.getElementById('message').style.display = 'block';
 }
 
-// Add event listener to the original Yes button
+// Function to show a styled popup message
+function showPopupMessage(text) {
+    document.getElementById('popup-text').innerText = text;
+    document.getElementById('popup').style.display = 'block';
+}
+
+// Add event listener to the Yes button
 document.getElementById('yesBtn').addEventListener('click', showValentineMessage);
 
-// Handle No button click
+// No button functionality with stepwise messages
+let noClickCount = 0;
+const noMessages = [
+    "huh? u miss-clicked? try again",
+    "chawala hada? tzidi tegheltti? raki diri fiha bel3ani sema",
+    "eya hah",
+    "sema ana 9ahba w bagra w ma nesswasch?",
+    "eya hah tanikitina",
+    "emoooouuuuuuuwaa7777🌻🧡🌻💜",
+    "hehehehe sayi dork nbeddelha w tchoufi hehehehe"
+];
+
 document.getElementById('noBtn').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'block';
+    if (noClickCount < noMessages.length) {
+        showPopupMessage(noMessages[noClickCount]);
+        noClickCount++;
+    } else {
+        document.getElementById('popup').style.display = 'none';
+        let noBtn = document.getElementById('noBtn');
+        noBtn.innerText = "Yes";
+        noBtn.id = "yesBtn2";
+        noBtn.replaceWith(noBtn.cloneNode(true));
+        document.getElementById('yesBtn2').addEventListener('click', showValentineMessage);
+    }
 });
 
-// Handle Okay button click (convert No to Yes)
+// Handle Okay button click to close popup
 document.getElementById('okBtn').addEventListener('click', function() {
     document.getElementById('popup').style.display = 'none';
-
-    let noBtn = document.getElementById('noBtn');
-    noBtn.innerText = "Yes";  // Change text to Yes
-    noBtn.id = "yesBtn2";  // Change the ID to avoid conflicts
-
-    // Remove previous event listener (No button function)
-    noBtn.replaceWith(noBtn.cloneNode(true));
-    document.getElementById('yesBtn2').addEventListener('click', showValentineMessage);
 });
-
