@@ -1,75 +1,78 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #ffb6c1; /* Light pink background */
+    color: #6b2737; /* Dark red text */
     margin: 0;
-    background: linear-gradient(135deg, #ff758c, #ff7eb3);
-    font-family: 'Arial', sans-serif;
+    padding: 0;
 }
 
 .container {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
+    margin-top: 20vh;
+    background: #ff8fa3; /* Soft pink box */
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    color: #d32f2f;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    color: #6b2737; /* Dark red */
 }
 
 button {
-    background-color: #d32f2f;
-    color: white;
-    border: none;
+    font-size: 18px;
     padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
+    margin: 10px;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 8px;
+    transition: 0.3s;
+    background: #d72638; /* Dark pinkish-red */
+    color: white;
 }
 
 button:hover {
-    background-color: #b71c1c;
+    background: #a71d2a; /* Slightly darker red */
 }
 
-#message {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333;
-}
-
-/* Popup Styling */
+/* Popup styles */
 .popup {
-    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
+    background: #ff8fa3; /* Same soft pink as the box */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    display: none;
+    color: #6b2737;
 }
 
-.error-box {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+#okBtn {
+    background: #d72638;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#okBtn:hover {
+    background: #a71d2a;
+}
+
+/* Message display */
+.message-box {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: pre-line;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #6b2737;
 }
