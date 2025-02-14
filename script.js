@@ -13,7 +13,7 @@ function showValentineMessage() {
         "ذلك الصوت الذي نسج من الحنين وطنًا، ومن الذكرى ملجأً دافئًا يحتويني وسط رياح الغربة والافتقاد. أخبريني، هل للزمن أن يتراجع خطوةً، أم أنني سأظل أبحث عنكِ في طيات الذكرى، بين همسات الشوق وصدى الحروف؟\n"+
         "رأيت في عينيكِ بحرًا من الحكايا، مدنًا من الأمان، وطفلًا يلوّح لي من ضفاف الماضي البعيد. رأيت ليلًا دافئًا يطمئن روحي، وصباحًا نقيًا يغسل عني تعب الأيام.\n\n"+        
         "Siham, sihamsch, esihamsch.. and the long long long elistta goes on.. in this sacred day blessed by the angels of love, whether the world likes it or not, no special day no special hour no special moment are needed to express what I deeply feel towards you and to show how I truly mean it when I say.. I love you\nhemlagh-kem🌻💜🌻🧡"+
-        +"\nEmoooooooooooooooouuuuuuuuuuuwaaaaaaa777777777🌻💜🌻🧡"
+        "\nEmoooooooooooooooouuuuuuuuuuuwaaaaaaa777777777🌻💜🌻🧡"+
         "\nWill you be my Valentine?";
 
     document.getElementById('message').style.display = 'block';
